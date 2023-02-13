@@ -1,20 +1,19 @@
-module.exports = function greet(name) {
-  this.name = name;
-  this.greeting = function greet() {
-    return 'Congratulations, ' + this.name;
-  };
+var prelims = {
+  myName: function (name) {
+    return name;
+  },
+
+  greet: function (myName) {
+    console.log('Hello, ' + myName);
+  },
+
+  congratulations: function (myName) {
+    console.log('Congratulations, ' + myName);
+  },
+
+  farewell: function (myName) {
+    console.log('Goodbye, ' + myName);
+  },
 };
 
-module.exports = function congratulations(nameOne) {
-  this.nameOne = nameOne;
-  this.congrats = function congratulations() {
-    return 'Congratulations, ' + this.nameOne;
-  };
-};
-
-module.exports = function farewell(nameTwo) {
-  this.nameTwo = nameTwo;
-  this.farewells = function farewell() {
-    return 'Goodbye, ' + this.nameTwo;
-  };
-};
+module.exports = prelims;

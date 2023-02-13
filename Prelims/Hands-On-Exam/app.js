@@ -1,10 +1,7 @@
-var greet = require('./prelim.js');
-var congratulations = require('./prelim.js');
-var farewell = require('./prelim.js');
-var name = new greet('April Gomez');
-var nameOne = new congratulations('April Gomez');
-var nameTwo = new farewell('April Gomez');
+var app = require('./prelim.js');
 
-console.log(name.greeting());
-console.log(nameOne.congrats());
-console.log(nameTwo.farewells());
+var name = app.myName('April Gomez');
+
+app.greet(name);
+app.congratulations(name);
+app.farewell(name);
